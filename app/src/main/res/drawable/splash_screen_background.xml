@@ -3,6 +3,6 @@
     android:opacity="opaque">
     <item android:drawable="@color/colorSplash"/>
     <item>
-        <bitmap android:src="@drawable/ic_logo" android:gravity="center"/>
+        <bitmap android:src="@drawable/ic_opinion" android:gravity="center"/>
     </item>
 </layer-list>
