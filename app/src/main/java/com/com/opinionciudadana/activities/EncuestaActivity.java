@@ -77,11 +77,13 @@ public class EncuestaActivity extends DefaultActivity {
 
                 Button si = findViewById(R.id.si);
                 si.setText(miEncuesta.getPreguntas().get(0).toString());
-                si.setEnabled(false);
+                //si.setEnabled(false);
+                si.setVisibility(View.INVISIBLE);
 
                 Button no = findViewById(R.id.no);
                 no.setText(miEncuesta.getPreguntas().get(1).toString());
-                no.setEnabled(false);
+                no.setVisibility(View.INVISIBLE);
+                //no.setEnabled(false);
                 Log.i("debug", "id de encuest: " + key);
                 validarUsuario(key);
             } else {
