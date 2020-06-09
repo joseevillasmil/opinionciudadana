@@ -14,7 +14,7 @@
         <menu>
             <item
                 android:id="@+id/nav_list"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_icono_encuesta"
                 android:title="Encuestas" />
         </menu>
     </item>
