@@ -2,15 +2,12 @@ package com.com.opinionciudadana.activities;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-
 import com.anychart.AnyChart;
 import com.anychart.AnyChartView;
 import com.anychart.chart.common.dataentry.DataEntry;
@@ -23,10 +20,8 @@ import com.anychart.enums.LegendLayout;
 import com.com.opinionciudadana.R;
 import com.com.opinionciudadana.model.Encuesta;
 import com.com.opinionciudadana.model.Respuesta;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.firestore.DocumentSnapshot;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +32,7 @@ public class EncuestaActivity extends DefaultActivity {
     private Button no;
     private String key;
     private Pie pie;
+    private FloatingActionButton compartir;
     private boolean usuarioHabilitado;
 
 
@@ -86,6 +82,15 @@ public class EncuestaActivity extends DefaultActivity {
                 //no.setEnabled(false);
                 Log.i("debug", "id de encuest: " + key);
                 validarUsuario(key);
+
+                this.compartir = findViewById(R.id.floatingActionButton);
+                this.compartir.setOnClickListener(v -> {
+                    Intent sendIntent = new Intent();
+                    sendIntent.setAction(Intent.ACTION_SEND);
+                    sendIntent.putExtra(Intent.EXTRA_TEXT, miEncuesta.getPregunta());
+                    sendIntent.setType("text/plain");
+                    startActivity(sendIntent);
+                });
             } else {
             }
         });
@@ -262,6 +267,7 @@ public class EncuestaActivity extends DefaultActivity {
 
     }
 
+
     public void addData(Encuesta encuesta) {
         /* List<DataEntry> data = new ArrayList<>();
         data.add(new ValueDataEntry(encuesta.getEncuestas().get(0), encuesta.getResultados().get(0)));
@@ -269,4 +275,5 @@ public class EncuestaActivity extends DefaultActivity {
         pie.data(data);
          */
     }
+
 }

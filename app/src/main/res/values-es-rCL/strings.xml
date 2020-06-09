@@ -26,4 +26,6 @@
     <string name="create_text">Te enviaremos un correo para verificar tu cuenta. Verifica tu bandeja de correo no desado si no aparece en tu bandeja de entrada.</string>
     <string name="create_email_fail">Tuvimos problemas para enviar el correo</string>
     <string name="app_name" translatable="false">Opinion Ciudadana</string>
+    <string name="nav_header_subtitle" translatable="false">Opinión Ciudadana 1.0</string>
+    <string name="nav_header_title" translatable="false">Equipo 1</string>
 </resources>
