@@ -170,7 +170,7 @@ public class EncuestaActivity extends DefaultActivity {
                 Log.i("debug", "la validación llega nula x2");
                 this.usuarioHabilitado = true;
                 findViewById(R.id.si).setVisibility(View.VISIBLE);
-                findViewById(R.id.si).setVisibility(View.VISIBLE);
+                findViewById(R.id.no).setVisibility(View.VISIBLE);
                 return;
             }
 
@@ -184,9 +184,10 @@ public class EncuestaActivity extends DefaultActivity {
                 }
             }
 
-            this.usuarioHabilitado = activar;
-            findViewById(R.id.si).setEnabled(activar);
-            findViewById(R.id.no).setEnabled(activar);
+            if(activar) {
+                findViewById(R.id.si).setVisibility(View.VISIBLE);
+                findViewById(R.id.no).setVisibility(View.VISIBLE);
+            }
 
         });
     }
