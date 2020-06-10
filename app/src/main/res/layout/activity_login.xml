@@ -7,6 +7,7 @@
     tools:context=".activities.LoginActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -19,9 +20,9 @@
 
         <TextView
             android:id="@+id/label_email"
-            android:labelFor="@id/login_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:labelFor="@id/login_email"
             android:text="@string/login_label_email" />
 
         <EditText
@@ -34,10 +35,10 @@
 
         <TextView
             android:id="@+id/label_password"
-            android:labelFor="@id/login_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:labelFor="@id/login_password"
             android:text="@string/login_label_password" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -85,13 +86,13 @@
             android:id="@+id/label_recover"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             android:clickable="true"
             android:focusable="true"
             android:onClick="recover"
             android:text="@string/login_link_recover"
-            android:layout_gravity="center"
             android:textColor="@color/colorLink" />
     </LinearLayout>
 
@@ -103,6 +104,17 @@
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="154dp"
+        android:layout_height="111dp"
+        android:src="@drawable/ic_login"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
