@@ -97,6 +97,7 @@ public class EncuestaActivity extends DefaultActivity {
     }
 
     public boolean verificar() {
+
         if(this.usuarioHabilitado) {
             return true;
         }
@@ -118,7 +119,7 @@ public class EncuestaActivity extends DefaultActivity {
 
     public void sendYes(View view) {
         if(!this.verificar()) {
-            return;
+           // return;
         }
         firestoreManager.getDocument("encuestas", key, queryDocumentSnapshots -> {
             if(queryDocumentSnapshots.isSuccessful()) {
@@ -138,7 +139,7 @@ public class EncuestaActivity extends DefaultActivity {
 
     public void sendNo(View view) {
         if(!this.verificar()) {
-            return;
+           // return;
         }
         firestoreManager.getDocument("encuestas", key, queryDocumentSnapshots -> {
             if(queryDocumentSnapshots.isSuccessful()) {
