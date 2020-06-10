@@ -19,7 +19,7 @@
     <string name="login_error_no_email">Email Mandatory</string>
     <string name="login_error_no_password">Password Mandatory</string>
     <string name="login_error">User and password doesn\'t match</string>
-    <string name="menu_action_logout">Logout</string>
+    <string name="menu_action_logout">Salir</string>
     <string name="login_create">Create account</string>
     <string name="create_label_email">Email</string>
     <string name="create_label_password">Password</string>
