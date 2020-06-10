@@ -118,9 +118,9 @@ public class EncuestaActivity extends DefaultActivity {
     }
 
     public void sendYes(View view) {
-        if(!this.verificar()) {
+        //if(!this.verificar()) {
            // return;
-        }
+        //}
         firestoreManager.getDocument("encuestas", key, queryDocumentSnapshots -> {
             if(queryDocumentSnapshots.isSuccessful()) {
                 DocumentSnapshot encuesta = queryDocumentSnapshots.getResult();
@@ -138,9 +138,9 @@ public class EncuestaActivity extends DefaultActivity {
     }
 
     public void sendNo(View view) {
-        if(!this.verificar()) {
+        //if(!this.verificar()) {
            // return;
-        }
+        //}
         firestoreManager.getDocument("encuestas", key, queryDocumentSnapshots -> {
             if(queryDocumentSnapshots.isSuccessful()) {
                 DocumentSnapshot encuesta = queryDocumentSnapshots.getResult();
